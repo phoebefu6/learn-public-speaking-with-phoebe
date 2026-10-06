@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on giving a talk to a room: one idea worth the time, an opening and a close, nerves as physiology with the evidence read honestly, a pace bench built on 2,299 real TED talks, slides that support you, and rehearsal that works. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Public Speaking with Phoebe">
+<meta property="og:description" content="One idea worth the room. Six sessions, one constructed first all-hands talk, and your own pace measured against 2,299 real talks in your browser.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-public-speaking-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-public-speaking-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Public Speaking with Phoebe">
+<meta name="twitter:description" content="How fast do real speakers talk? Your transcript against 2,299 TED talks, measured in your browser.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-public-speaking-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Public Speaking with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: 1; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--muted); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,var(--indigo-50)); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--clay); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Communication</div>
+    <h1>Learn <span class="accent">Public Speaking</span> with Phoebe</h1>
+    <p class="sub">A talk is one idea, said to a room that cannot scroll back. Six sessions on getting one across: finding the sentence your talk is for, the first thirty seconds and the last line, what nerves actually are and what the evidence on taming them really shows, slides that carry you rather than compete with you, and rehearsal that changes the talk. One constructed running case, a team lead's first all-hands, and one bench: your own speaking pace measured against 2,299 real TED talks, in your browser.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="2299">2,299</b><span>real talks on the bench</span></div>
+      <div class="stat"><b data-count="152">152</b><span>median words a minute</span></div>
+      <div class="stat"><b data-count="3">3</b><span>famous claims traced</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🎯 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· from the sentence to the questions after</span></h2>
+      <p class="plede">The running case is <strong>Noor Haddad, a constructed team lead</strong> of a nine-person support operations team, preparing a ten-minute slot at her first company all-hands. She is invented for teaching, and every page says so. Alongside her, every build-along runs on a talk of your own.</p>
+    </div>
+
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-one-idea-worth-the-room.html" style="--diff:#34D399">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Session 1 · foundations</span>
+        <h3>One idea worth the room</h3>
+        <p>A talk carries one idea. The throughline in the words of the person who named it, the one-sentence test, the cut list, and how much a ten-minute slot really holds.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-the-first-thirty-seconds.html" style="--diff:#FBBF24">
+        <span class="cicon">🚪</span>
+        <span class="cnum">Session 2 · core</span>
+        <h3>The first thirty seconds and the last line</h3>
+        <p>An opening that gives the room a reason to care, a close that is not "any questions?", and what Mehrabian's 7-38-55 actually measured.</p>
+        <span class="meta"><span class="pill">open and close</span></span>
+      </a>
+      <a class="course-card" href="courses/03-nerves-are-physiology.html" style="--diff:#FBBF24">
+        <span class="cicon">💓</span>
+        <span class="cnum">Session 3 · core</span>
+        <h3>Nerves are physiology</h3>
+        <p>What a racing heart is doing, the "get excited" reappraisal study read at source with its replication record, and where "people fear speaking more than death" came from.</p>
+        <span class="meta"><span class="pill">evidence, honestly</span></span>
+      </a>
+      <a class="course-card" href="courses/04-the-pace-bench.html" style="--diff:#F87171">
+        <span class="cicon">⏱️</span>
+        <span class="cnum">Session 4 · bench night</span>
+        <h3>The pace bench</h3>
+        <p>How fast real speakers talk, from 2,299 TED talks measured in your browser. Paste your own transcript, list your fillers, test "speak faster to fit more in", and press the break button.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/05-slides-that-support.html" style="--diff:#FB923C">
+        <span class="cicon">🖼️</span>
+        <span class="cnum">Session 5 · deeper</span>
+        <h3>Slides that support, not compete</h3>
+        <p>When a slide helps a listener and when it splits their attention, what identical on-screen text did to learning in a controlled study, and the 10/20/30 rule labelled for what it is.</p>
+        <span class="meta"><span class="pill">say it or show it</span></span>
+      </a>
+      <a class="course-card" href="courses/06-rehearsal-and-the-questions.html" style="--diff:#FB923C">
+        <span class="cicon">🎤</span>
+        <span class="cnum">Session 6 · deeper</span>
+        <h3>Rehearsal that works, and the questions after</h3>
+        <p>Rehearsing out loud and on the clock, predicting the questions you will get, answering the one you cannot, and the final run-through before Noor walks on.</p>
+        <span class="meta"><span class="pill amber">🔒 final run-through</span></span>
+      </a>
+    </div>
+
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>foundations</span>
+      <span><i style="background:#FBBF24"></i>core</span>
+      <span><i style="background:#FB923C"></i>deeper</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means you can find the one sentence a talk is for, open and close on purpose, read the evidence on nerves without overselling it, measure your own pace, cut a slide that competes with you, and rehearse in a way that changes the talk. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+
+  <section class="section">
+    <div class="not-this">
+      <h3>What this is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>How do I structure a message, an email or a two-minute spoken update in a meeting?</td><td><a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication ↗</a></td></tr>
+        <tr><td>How do I design the slides and the story arc of a deck?</td><td><a href="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/">Visual Storytelling ↗</a> and <a href="https://phoebefu6.github.io/learn-ai-ppt-with-phoebe/">AI PPT ↗</a></td></tr>
+        <tr><td>How do I run a workshop or a meeting where the room does the talking?</td><td><a href="https://phoebefu6.github.io/learn-facilitation-with-phoebe/">Facilitation ↗</a></td></tr>
+        <tr><td><strong>I have to stand up in front of a room and say one thing well, and I want to know which speaking advice is real.</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>A talk to a room.</strong> The idea, the opening and close, the nerves, the pace, the slides and the rehearsal. Message structure, deck design and facilitation are taught next door and linked from here rather than repeated.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: one idea, said so the room can keep it.</p>
+      <div class="path"><b>📅 I have a talk next week</b>
+        <a class="pstep" href="courses/01-one-idea-worth-the-room.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-first-thirty-seconds.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-rehearsal-and-the-questions.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">find the sentence, write the open and close, rehearse it</span>
+      </div>
+      <div class="path"><b>💓 I dread speaking</b>
+        <a class="pstep" href="courses/03-nerves-are-physiology.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-pace-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-rehearsal-and-the-questions.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">what nerves are, your measured pace, rehearsal that lowers the stakes</span>
+      </div>
+      <div class="path"><b>🎤 The whole craft</b>
+        <a class="pstep" href="courses/01-one-idea-worth-the-room.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-first-thirty-seconds.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-nerves-are-physiology.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-pace-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-slides-that-support.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-rehearsal-and-the-questions.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from one sentence to the last question</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">Speaking advice travels with famous numbers, and several of the most famous do not say what they are quoted as saying. Each claim on these pages carries its status.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Every bench figure: pace, sentence length, pause marks, fillers, the break button</td><td><strong>Really computed</strong> in your browser from derived counts for 2,299 one-speaker TED talks (Kaggle, rounakbanik/ted-talks); no transcript text is shipped</td></tr>
+      <tr><td>Whether faster speech is understood less</td><td><strong>Not measured</strong> by the bench, and said so on the widget; one 1970 study of machine-compressed speech is read at source in session 4, with its limits</td></tr>
+      <tr><td>"Words are 7% of the message" (Mehrabian 7-38-55)</td><td><strong>Misquoted scope.</strong> Mehrabian's own page limits it to feelings and attitudes; session 2 shows what that means</td></tr>
+      <tr><td>"Say 'I am excited' before you speak"</td><td><strong>Read at source,</strong> with its one direct replication, which did not reproduce the observer ratings, taught alongside it in session 3</td></tr>
+      <tr><td>"People fear public speaking more than death"</td><td><strong>Traced</strong> in session 3 to a 1973 survey reported in a London newspaper, whose original report could not be read; a 2024 survey puts the two fears within three points of each other</td></tr>
+      <tr><td>The 10/20/30 rule of slides</td><td><strong>An opinion,</strong> from its author's 2005 blog post, with no study behind it</td></tr>
+      <tr><td>Noor Haddad, her talk, her transcripts and her numbers</td><td><strong>Constructed,</strong> for teaching</td></tr>
+    </table>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole path at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-public-speaking-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Neighbours on the shelf: <a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/">Visual Storytelling ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-facilitation-with-phoebe/">Facilitation ↗</a></span>
+  </footer>
+
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+ "title": "Public\nSpeaking",
+ "centerColor": "#5A0A04",
+ "sessions": [
+  {
+   "label": "One idea worth\nthe room",
+   "href": "courses/01-one-idea-worth-the-room.html",
+   "color": "#34D399",
+   "concepts": [
+    {
+     "label": "The throughline",
+     "href": "courses/01-one-idea-worth-the-room.html"
+    },
+    {
+     "label": "The one-sentence test",
+     "href": "courses/01-one-idea-worth-the-room.html"
+    },
+    {
+     "label": "A slot is a word budget",
+     "href": "courses/01-one-idea-worth-the-room.html"
+    }
+   ]
+  },
+  {
+   "label": "The first thirty\nseconds, the last line",
+   "href": "courses/02-the-first-thirty-seconds.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "A reason to care",
+     "href": "courses/02-the-first-thirty-seconds.html"
+    },
+    {
+     "label": "The last line",
+     "href": "courses/02-the-first-thirty-seconds.html"
+    },
+    {
+     "label": "The 7-38-55 myth",
+     "href": "courses/02-the-first-thirty-seconds.html"
+    }
+   ]
+  },
+  {
+   "label": "Nerves are\nphysiology",
+   "href": "courses/03-nerves-are-physiology.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Arousal reappraisal",
+     "href": "courses/03-nerves-are-physiology.html"
+    },
+    {
+     "label": "The replication record",
+     "href": "courses/03-nerves-are-physiology.html"
+    },
+    {
+     "label": "Fear above death, traced",
+     "href": "courses/03-nerves-are-physiology.html"
+    }
+   ]
+  },
+  {
+   "label": "The pace\nbench",
+   "href": "courses/04-the-pace-bench.html",
+   "color": "#F87171",
+   "concepts": [
+    {
+     "label": "152 wpm, measured",
+     "href": "courses/04-the-pace-bench.html"
+    },
+    {
+     "label": "Speak faster: anti-lever",
+     "href": "courses/04-the-pace-bench.html"
+    },
+    {
+     "label": "The break button",
+     "href": "courses/04-the-pace-bench.html"
+    }
+   ]
+  },
+  {
+   "label": "Slides that support,\nnot compete",
+   "href": "courses/05-slides-that-support.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "Say it or show it",
+     "href": "courses/05-slides-that-support.html"
+    },
+    {
+     "label": "Identical text costs",
+     "href": "courses/05-slides-that-support.html"
+    },
+    {
+     "label": "10/20/30 is an opinion",
+     "href": "courses/05-slides-that-support.html"
+    }
+   ]
+  },
+  {
+   "label": "Rehearsal and\nthe questions",
+   "href": "courses/06-rehearsal-and-the-questions.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "Rehearse out loud",
+     "href": "courses/06-rehearsal-and-the-questions.html"
+    },
+    {
+     "label": "Predict the questions",
+     "href": "courses/06-rehearsal-and-the-questions.html"
+    },
+    {
+     "label": "The final run-through",
+     "href": "courses/06-rehearsal-and-the-questions.html"
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
